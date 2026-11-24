@@ -761,7 +761,7 @@ namespace AuthKeyz
                         UnityEngine.Debug.LogError("You're connecting too fast. Please slow down your requests and try again");
                         Application.Quit();
                         return "";
-                    default: // site won't resolve. you should use authkeyz.uk domain since it's not blocked by any ISPs
+                    default: // site won't resolve. you should use a custom domain or authkeyz.bond since it's not blocked by any ISPs
                         UnityEngine.Debug.LogError("Connection failed. Please try again");
                         Application.Quit();
                         return "";
@@ -791,7 +791,7 @@ namespace AuthKeyz
                     case (HttpStatusCode)429: // client hit our rate limit
                         return new WaitForSeconds(3).ToString();
                         return req(post_data);
-                    default: // site won't resolve. you should use authkeyz.uk domain since it's not blocked by any ISPs
+                    default: // site won't resolve. you should use a custom domain or authkeyz.bond since it's not blocked by any ISPs
                         UnityEngine.Debug.LogError("Connection failed. Please try again");
                         Application.Quit();
                         return "";
